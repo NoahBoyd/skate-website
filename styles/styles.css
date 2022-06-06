@@ -10,6 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Login Page */
@@ -34,13 +35,24 @@
 }
 
 .login-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 120px;
     width: 120px;
+    min-height: 120px;
+    min-width: 120px;
     border-radius: 60px;
-    background-color: #282828;
+    background-color: #f6f5f5;
     margin-top: 2rem;
     margin-bottom: 2rem;
     box-shadow: var(--box-shadow-primary);
+    
+}
+
+.logo {
+    max-height: 90%;
+    max-width: 90%;
 }
 
 .login-brand-name {
@@ -68,7 +80,10 @@
     outline: none;
 }
 
-.login-submit-button {
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 3rem;
     width: 80%;
     font-size: 120%;
@@ -77,15 +92,33 @@
     border-radius: 10px;
     box-shadow: var(--box-shadow-primary);
     margin-bottom: 1rem;
-    color: var(--main-accent-colour);
+    user-select: none;
 }
 
-.login-submit-button:active {
+.login-button:active {
     box-shadow: var(--box-shadow-secondary);
 }
 
+.login-button-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    width: 99%;
+    height: 98%;
+    border-radius: 10px;
+    background: rgb(130,216,139);
+    background: linear-gradient(90deg, rgba(130,216,139,1) 0%, rgb(140, 194, 147) 100%);
+}
+
+.login-button-inner:active {
+    box-shadow: inset 4px 4px 4px rgb(84, 113, 87), inset -4px -4px 4px rgb(203, 252, 210);
+}
+
+
+
 .login-small-text {
-    font-size: 90%;
+    font-size: 80%;
     margin-bottom: 2rem;
 }
 

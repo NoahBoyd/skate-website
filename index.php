@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skate</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-
+<?php include "pages/head.php" ?>
 <body>
     <div class="login-container">
         <div class="inner-login-container">
             <div class="login-logo-container">
-
+                <img class="logo" src="images/tempLogo.svg" alt="">
             </div>
 
             <span class="login-brand-name">Brand Name</span>
@@ -22,13 +12,19 @@
 
             <input type="password" class="login-text-field" placeholder="Password">
 
-            <input type="submit" class="login-submit-button" value="Login">
+            <div id ="login" class="login-button">
+                <div class="login-button-inner">
+                    Login
+                </div>
+            </div>
 
             <span class="login-small-text">Forgot your password?</span>
 
             <span class="login-small-text login-small-text-signup">Dont have an account?</span>
 
-            <input type="button" class="login-submit-button" value="Signup">
+            <div id="signup" class="login-button">
+                    Signup
+            </div>
 
             <div class="login-footer">Socials go here</div>
 
