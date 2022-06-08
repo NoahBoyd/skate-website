@@ -23,21 +23,23 @@
 
             <span class="login-brand-name">Brand Name</span>
 
-            <input class="login-text-field" placeholder="Username">
+            <input class="wide-text-field" placeholder="Username">
 
-            <input type="password" class="login-text-field" placeholder="Password">
+            <input type="password" class="wide-text-field" placeholder="Password">
 
-            <div id ="login" class="login-button">
-                <div class="login-button-inner">
+            <span class="error-text">Error</span>
+
+            <div id ="login" class="wide-button">
+                <div class="wide-button-inner">
                     Login
                 </div>
             </div>
-
+            
             <span class="login-small-text">Forgot your password?</span>
 
             <span class="login-small-text login-small-text-signup">Dont have an account?</span>
 
-            <div id="signup" class="login-button">
+            <div id="signup" class="wide-button">
                     Signup
             </div>
 

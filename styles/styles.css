@@ -61,15 +61,15 @@
     color: var(--main-accent-colour);
 }
 
-.login-text-field {
+.wide-text-field {
     height: 3rem;
     padding: 1rem;
     width: 80%;
     text-align: center;
     color: white;
-    font-size: 120%;
+    font-size: 80%;
     background-color: transparent;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: 0;
     box-shadow: var(--box-shadow-secondary);
      border-radius: 10px;
@@ -80,7 +80,13 @@
     outline: none;
 }
 
-.login-button {
+.error-text {
+    color: #FF5757;
+    font-size: 80%;
+    margin-bottom: 3px;
+}
+
+.wide-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,11 +101,11 @@
     user-select: none;
 }
 
-.login-button:active {
+.wide-button:active {
     box-shadow: var(--box-shadow-secondary);
 }
 
-.login-button-inner {
+.wide-button-inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +117,7 @@
     background: linear-gradient(90deg, rgba(130,216,139,1) 0%, rgb(140, 194, 147) 100%);
 }
 
-.login-button-inner:active {
+.wide-button-inner:active {
     box-shadow: inset 4px 4px 4px rgb(84, 113, 87), inset -4px -4px 4px rgb(203, 252, 210);
 }
 
@@ -137,6 +143,40 @@
     border-radius: 0 0 10px 10px;
 }
 
+/*  Signup Page  */
+.signup-back-button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    height: 4rem;
+    margin-left: 2rem;
+}
+
+.signup-back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-primary);
+    user-select: none;
+}
+
+.signup-back-button:active {
+    box-shadow: var(--box-shadow-secondary);
+}
+.back-button-image {
+    height: 50%;
+    width: 50%;
+    filter: invert(1);
+}
+
+
 
 /* Media Queries */
 
@@ -152,5 +192,9 @@
 
     .login-small-text-signup {
         margin-bottom: 1rem;
+    }
+
+    .wide-text-field {
+        font-size: 120%;
     }
 }
