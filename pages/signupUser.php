@@ -14,13 +14,13 @@
 
             <span class="login-brand-name">Create Account</span>
 
-            <input type="text" class="wide-text-field" placeholder="Email">
+            <input type="text" class="wide-text-field signup-text-field" placeholder="Email">
 
-            <input type="text" class="wide-text-field" placeholder="Username">
+            <input type="text" class="wide-text-field signup-text-field" placeholder="Username">
 
-            <input type="password" class="wide-text-field" placeholder="Password">
+            <input type="password" class="wide-text-field signup-text-field" placeholder="Password">
 
-            <input type="password" class="wide-text-field" placeholder="Confirm Password">
+            <input type="password" class="wide-text-field signup-text-field" placeholder="Confirm Password">
 
             <span class="error-text">Error</span>
 
