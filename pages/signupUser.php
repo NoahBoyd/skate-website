@@ -14,13 +14,13 @@
 
             <span class="login-brand-name">Create Account</span>
 
-            <input type="text" class="wide-text-field" placeholder="Email">
+            <input type="text" class="wide-text-field signup-text-field" placeholder="Email">
 
-            <input type="text" class="wide-text-field" placeholder="Username">
+            <input type="text" class="wide-text-field signup-text-field" placeholder="Username">
 
-            <input type="password" class="wide-text-field" placeholder="Password">
+            <input type="password" class="wide-text-field signup-text-field" placeholder="Password">
 
-            <input type="password" class="wide-text-field" placeholder="Confirm Password">
+            <input type="password" class="wide-text-field signup-text-field" placeholder="Confirm Password">
 
             <span class="error-text">Error</span>
 
@@ -30,7 +30,12 @@
                 </div>
             </div>
 
-            <div class="login-footer">Socials go here</div>
+            <div class="socials-footer">
+                <img class="social-button" src="../images/twitter.svg" alt="">
+                <img class="social-button" src="../images/instagram.svg" alt="">
+                <img class="social-button" src="../images/facebook.svg" alt="">
+                <img class="social-button" src="../images/linkedin.svg" alt="">
+            </div>
 
         </div>
     </div>

@@ -43,7 +43,12 @@
                     Signup
             </div>
 
-            <div class="login-footer">Socials go here</div>
+            <div class="socials-footer">
+                <img class="social-button" src="images/twitter.svg" alt="">
+                <img class="social-button" src="images/instagram.svg" alt="">
+                <img class="social-button" src="images/facebook.svg" alt="">
+                <img class="social-button" src="images/linkedin.svg" alt="">
+            </div>
 
         </div>
     </div>

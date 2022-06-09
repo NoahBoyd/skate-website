@@ -4,6 +4,9 @@
 
     /* Colours */  
     --main-accent-colour: #82D88B;
+
+    /* Green filter for SVG */
+    --green-filter: invert(55%) sepia(100%) saturate(1) hue-rotate(45deg);
 }
 
 * {
@@ -69,7 +72,7 @@
     color: white;
     font-size: 80%;
     background-color: transparent;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border: 0;
     box-shadow: var(--box-shadow-secondary);
      border-radius: 10px;
@@ -84,6 +87,7 @@
     color: #FF5757;
     font-size: 80%;
     margin-bottom: 3px;
+    display: none;
 }
 
 .wide-button {
@@ -114,7 +118,7 @@
     height: 98%;
     border-radius: 10px;
     background: rgb(130,216,139);
-    background: linear-gradient(90deg, rgba(130,216,139,1) 0%, rgb(140, 194, 147) 100%);
+    background: linear-gradient(90deg, rgba(130,216,139,0.8) 0%, rgba(140, 194, 147, 0.8) 100%);
 }
 
 .wide-button-inner:active {
@@ -125,14 +129,14 @@
 
 .login-small-text {
     font-size: 80%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .login-small-text-signup {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
-.login-footer {
+.socials-footer {
     display: flex;
     margin-top: auto;
     height: 3rem;
@@ -141,6 +145,17 @@
     align-items: center;
     justify-content: center;
     border-radius: 0 0 10px 10px;
+}
+
+.social-button {
+    margin-left: 1.5rem;
+    height: 50%;
+    filter: invert(1);
+}
+
+.social-button:hover {
+    /* this filter changes svg to green */
+    filter: var(--green-filter);
 }
 
 /*  Signup Page  */
@@ -176,6 +191,10 @@
     filter: invert(1);
 }
 
+.signup-text-field {
+    margin-bottom: 1rem;
+}
+
 
 
 /* Media Queries */
@@ -196,5 +215,10 @@
 
     .wide-text-field {
         font-size: 120%;
+    }
+
+    /*  Signup  */
+    .signup-text-field {
+        margin-bottom: 2rem;
     }
 }
