@@ -17,30 +17,37 @@
 <body>
     <div class="login-container">
         <div class="inner-login-container">
-            <div class="login-logo-container">
-                <img class="logo" src="images/tempLogo.svg" alt="">
-            </div>
 
-            <span class="login-brand-name">Brand Name</span>
-
-            <input class="wide-text-field" placeholder="Username">
-
-            <input type="password" class="wide-text-field" placeholder="Password">
-
-            <span class="error-text">Error</span>
-
-            <div id ="login" class="wide-button">
-                <div class="wide-button-inner">
-                    Login
+            <div class="login-logo-container-outer">
+                <div class="login-logo-container-inner">
+                    <img class="logo" src="images/tempLogo.svg" alt="">
                 </div>
+                <span class="login-brand-name">Brand Name</span>
             </div>
-            
-            <span class="login-small-text">Forgot your password?</span>
 
-            <span class="login-small-text login-small-text-signup">Dont have an account?</span>
 
-            <div id="signup" class="wide-button">
-                    Signup
+            <div class="login-inputs">
+                <input class="wide-text-field" placeholder="Username">
+
+                <input type="password" class="wide-text-field" placeholder="Password">
+
+                <span class="error-text">Error</span>
+
+                <div id ="login" class="wide-button">
+                    <div class="wide-button-inner">
+                        Login
+                    </div>
+                </div>
+
+                <span class="login-small-text">Forgot your password?</span>
+            </div>
+
+            <div class="login-signup">
+                <span class="login-small-text login-small-text-signup">Dont have an account?</span>
+
+                <div id="signup" class="wide-button">
+                        Signup
+                </div>
             </div>
 
             <div class="socials-footer">
