@@ -41,7 +41,7 @@ body {
     width: 80vw;
     border-radius: 10px;
     box-shadow: var(--box-shadow-primary);
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .login-logo-container-outer {
@@ -108,6 +108,7 @@ body {
     text-align: center;
     color: white;
     font-size: 80%;
+    /* font-size: clamp(80%, 80%, 120%); */
     background-color: transparent;
     border: 0;
     box-shadow: var(--box-shadow-secondary);
@@ -259,12 +260,12 @@ body {
         width: 100px;
     }
     .wide-text-field {
-        font-size: 120%;
+        font-size: 150%;
     }
 }
 
 /* Tiny Screen Size */
-@media only screen and (max-height: 450px) {
+@media only screen and (max-height: 520px) {
 
     .login-logo-container-outer {
         height: 10%;
