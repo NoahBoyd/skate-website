@@ -180,11 +180,13 @@ body {
     margin-left: 1.5rem;
     height: 30%;
     filter: invert(1);
+    transition: all 0.1s;
 }
 
 .social-button:hover {
     /* this filter changes svg to green */
     filter: var(--green-filter);
+    height: 35%;
 }
 
 
