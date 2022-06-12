@@ -25,18 +25,19 @@ window.addEventListener('load', function() {
         $(errorSpan).css('display', 'none');
     }
 
+    // this function checks that are text input entries are valid
     function validateFields() {
         let blankCount = 0;
         let error = "";
         signupFields.forEach(field => {
             if ($(field[0]).val().length === 0) {
-                error =  `${$(field[1])}`;
+                error =  field[1];
                 blankCount +=1;
             }
             if (blankCount > 1) {
-                showError('More than one field is blank');
+                showError('One or more fields is invalid');
             } else {
-                showError(`${error} field can not be empty`);
+                showError(`${error} is invalid`);
             }
         });
     }
