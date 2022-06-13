@@ -80,5 +80,4 @@ if ($valid) {
     }
 }
 
-
 echo json_encode($result);
