@@ -8,10 +8,10 @@ window.addEventListener('load', function() {
 
     // Fields
     let errorSpan = $('.error-text');
-    let emailField = [$('#email-field'), 'Email'];
-    let usernameField = [$('#username-field'), 'Username'];
-    let passwordField = [$('#password-field'), 'Password'];
-    let confirmField = [$('#confirm-field'), "Password Confirm"];
+    let emailField = [$('#email-field'), 'Email is invalid'];
+    let usernameField = [$('#username-field'), 'Username is invalid'];
+    let passwordField = [$('#password-field'), 'Password is invalid'];
+    let confirmField = [$('#confirm-field'), "Passwords don't match"];
     let signupFields = [emailField, usernameField, passwordField, confirmField];
     // functions
 
@@ -29,17 +29,39 @@ window.addEventListener('load', function() {
     function validateFields() {
         let blankCount = 0;
         let error = "";
+        // Check that each field is not empty, Set error if field is empty
         signupFields.forEach(field => {
             if ($(field[0]).val().length === 0) {
                 error =  field[1];
                 blankCount +=1;
             }
-            if (blankCount > 1) {
-                showError('One or more fields is invalid');
-            } else {
-                showError(`${error} is invalid`);
-            }
         });
+
+        if (blankCount === 0) {
+            if (passwordsMatch()) { // no blanks and passwords match, return true
+                return true;
+            } else { // passwords do not match
+                showError("Passwords don't match");
+            }
+        } else if (blankCount === 1) { // 1 field is empty
+            showError(error);
+        } else { // more than 1 field is empty
+            showError('More than one field is invalid');
+        }
+        return false;
+    }
+
+    function passwordsMatch() {
+        if (passwordField[0].val() === confirmField[0].val()) {
+            hideError();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function ajaxSuccess(result) {
+        console.log(result);
     }
 
     // button events
@@ -48,8 +70,21 @@ window.addEventListener('load', function() {
     })
 
     signupButton.on('click', () => {
-        console.log('signup user');
         // check that no fields are blank
-        validateFields();
+        if (validateFields()) {
+            // create array of field values
+            let fieldValues = signupFields.map(x => $(x[0]).val());
+
+            let url = "../server/signupNewUser.php?userEmail=" + fieldValues[0] + "&userName=" + fieldValues[1] + "&password=" + fieldValues[2];
+            console.log(url);
+
+            // ajax call
+            $.ajax({
+                url: url,
+                type: "POST",
+                datatype: 'json',
+                success: ajaxSuccess
+            })
+        }
     })
 })

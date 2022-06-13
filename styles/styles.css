@@ -225,6 +225,10 @@ body {
     margin-left: 1rem;
 }
 
+.signup-back-button:active {
+    box-shadow: var(--box-shadow-secondary);
+}
+
 .signup-logo-container-outer {
     display: flex;
     flex-direction: column;
