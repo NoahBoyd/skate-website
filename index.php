@@ -27,9 +27,9 @@
 
 
             <div class="login-inputs">
-                <input class="wide-text-field" placeholder="Username">
+                <input id="username" class="wide-text-field" placeholder="Username">
 
-                <input type="password" class="wide-text-field" placeholder="Password">
+                <input id="password" type="password" class="wide-text-field" placeholder="Password">
 
                 <span class="error-text">Error</span>
 
