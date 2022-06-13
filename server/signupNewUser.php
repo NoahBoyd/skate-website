@@ -44,7 +44,7 @@ function addUser($userEmail, $username, $passwordHashed) {
 
 // **********************MAIN********************************
 $valid = true;
-// result error codes (-1: INVALID ENTRY, -2: Email Taken, -3: Username Taken)
+// result error codes (1: Success, -1: INVALID ENTRY, -2: Username Taken, -3: Email Taken, -4 failed to add user to database)
 $result = [];
 
 // validate parameters
@@ -80,37 +80,5 @@ if ($valid) {
     }
 }
 
-// if ($valid) {
-//     $userTaken = true;
-//     $emailTaken = true;
-
-//     // check if email exist in the database
-//     if (checkDatabase('users_email', $userEmail)) {
-//         $emailTaken = true;
-//         $result = [-2];
-//     } else {
-//         $emailTaken = false;
-//         $result = ["not found in database"];
-
-//     }
-
-    // check if username exists in the database
-    // if (checkDatabase("users_name", $username)) {
-    //     $userTaken = false;
-    //     $result = [-3];
-    // } else {
-    //     $userTaken = true;
-    // }
-    
-    // if username and email do not exist in database, add to database
-    // if ($emailTaken === false and $userTaken === false) {
-    //     // insert user data into database
-    //     if (addUser($userEmail, $username, $passwordHashed)) {
-    //         $result = [1];
-    //     } else {
-    //         $result = [-4];
-    //     }
-    // }
-// }
 
 echo json_encode($result);
