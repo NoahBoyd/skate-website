@@ -33,11 +33,12 @@ if ($success) {
         while ($row = $stmt->fetch()) {
             $dbPassword = $row['users_password'];
             $userID = $row['users_id'];
+            $userName = $row['users_name'];
 
             // verify password
             if (password_verify($password, $dbPassword)) {
                 $passwordsMatch = true;
-                $result = [1];
+                $result = [1, $userID, $userName];
                 // start session
             } else {
                 $result = [-4]; // passwords do not match
