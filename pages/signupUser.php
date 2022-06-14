@@ -23,9 +23,15 @@
 
                 <input id="username-field" type="text" class="wide-text-field signup-text-field" placeholder="Username">
 
-                <input id="password-field" type="password" class="wide-text-field signup-text-field" placeholder="Password">
-
-                <input id="confirm-field" type="password" class="wide-text-field signup-text-field" placeholder="Confirm Password">
+                <div class="signup-inputs-password">
+                    <input id="password-field" type="password" class="wide-text-field signup-text-field signup-password-field" placeholder="Password">
+                    <img src="../images/eye.svg" alt="" class="show-password">
+                </div>
+                
+                <div class="signup-inputs-password">
+                    <input id="confirm-field" type="password" class="wide-text-field signup-text-field signup-password-field" placeholder="Confirm Password">
+                    <img src="../images/eye.svg" alt="" class="show-password">
+                </div>
 
                 <span class="error-text">Error</span>
 

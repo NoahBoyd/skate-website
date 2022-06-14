@@ -6,12 +6,24 @@ window.addEventListener("load", function() {
     let errorSpan = $('.error-text');
     let usernameField = [$('#username'), 'Username is invalid'];
     let passwordField = [$('#password'), 'Incorrect Password'];
+    let showPasswordButton = $('.show-password');
     let loginFields = [usernameField, passwordField];
-
 
     // button click events
     indexSignupButton.on('click', function() {
         window.location.replace('pages/signupUser.php');
+    });
+
+    // function for show-password button to toggle password/text
+    showPasswordButton.on('click', (e) => {
+        console.log('show password');
+        let passwordField = $(e.target).siblings()[0];
+        $(e.target).toggleClass('show-password-active');
+        if ($(passwordField).attr('type') === "password") {
+            $(passwordField).attr('type', 'text');
+        } else {
+            $(passwordField).attr('type', 'password');
+        }
     });
 
     // functions

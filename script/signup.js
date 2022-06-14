@@ -8,6 +8,7 @@ window.addEventListener('load', function() {
 
     // Fields
     let errorSpan = $('.error-text');
+    let showPasswordButton = $('.show-password');
     let emailField = [$('#email-field'), 'Email is invalid'];
     let usernameField = [$('#username-field'), 'Username is invalid'];
     let passwordField = [$('#password-field'), 'Password is invalid'];
@@ -63,6 +64,18 @@ window.addEventListener('load', function() {
     function ajaxSuccess(result) {
         console.log(result);
     }
+
+    // function for show-password button to toggle password/text
+    showPasswordButton.on('click', (e) => {
+        let passwordField = $(e.target).siblings()[0];
+        $(e.target).toggleClass('show-password-active');
+
+        if ($(passwordField).attr('type') === "password") {
+            $(passwordField).attr('type', 'text');
+        } else {
+            $(passwordField).attr('type', 'password');
+        }
+    });
 
     // button events
     backButton.on('click', () => {
