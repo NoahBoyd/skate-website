@@ -16,7 +16,6 @@ window.addEventListener("load", function() {
 
     // function for show-password button to toggle password/text
     showPasswordButton.on('click', (e) => {
-        console.log('show password');
         let passwordField = $(e.target).siblings()[0];
         $(e.target).toggleClass('show-password-active');
         if ($(passwordField).attr('type') === "password") {
