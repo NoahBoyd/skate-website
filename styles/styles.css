@@ -301,6 +301,80 @@ body {
     width: 100%;
 }
 
+/*****************Homepage*************************/
+
+.homepage-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search Header */
+.search-header {
+    display: flex;
+    height: 10vh;
+    /* background-color: aliceblue; */
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    /* background-color: #df2323; */
+}
+
+.bar {
+    width: 50%;
+    max-width: 50px;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.searchbar-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:aquamarine; */
+}
+
+#searchbar {
+    border: none;
+    border-radius: 15px;
+    height: 40%;
+    width: 90%;
+    box-shadow: var(--box-shadow-primary);
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.profile-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow-primary);
+}
+
+
+
+
+/* Homepage Nav */
+
+/* Homepage Main */
+
 
 
 /* Media Queries */
@@ -319,6 +393,9 @@ body {
     .wide-text-field {
         font-size: 150%;
     }
+
+    /* homepage */
+    
 }
 
 /* Tiny Screen Size */
@@ -356,6 +433,16 @@ body {
     }
     .signup-fields {
         height: 80%;
+    }
+
+    /* homepage */
+    .profile-button {
+        height: 40px;
+        width: 40px;
+    }
+
+    #searchbar {
+        height: 50%;
     }
 }
 

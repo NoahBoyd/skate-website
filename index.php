@@ -27,11 +27,11 @@
 
 
             <div class="login-inputs">
-                <input id="username" class="wide-text-field" placeholder="Username">
+                <input id="username" class="wide-text-field" placeholder="Username" value="NoahBoydx">
 
                 <div class="login-inputs-password">
-                    <input id="password" type="password" class="wide-text-field" placeholder="Password">
-                    <img src="images/eye.svg" alt="" class="show-password">
+                    <input id="password" type="password" class="wide-text-field" placeholder="Password" value="Merleo321!">
+                    <img src="images/eye.svg" alt="" class="show-password" draggable="false">
                 </div>
                 
 

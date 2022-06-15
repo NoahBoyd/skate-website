@@ -25,12 +25,12 @@
 
                 <div class="signup-inputs-password">
                     <input id="password-field" type="password" class="wide-text-field signup-text-field signup-password-field" placeholder="Password">
-                    <img src="../images/eye.svg" alt="" class="show-password">
+                    <img src="../images/eye.svg" alt="" class="show-password" draggable="false">
                 </div>
                 
                 <div class="signup-inputs-password">
                     <input id="confirm-field" type="password" class="wide-text-field signup-text-field signup-password-field" placeholder="Confirm Password">
-                    <img src="../images/eye.svg" alt="" class="show-password">
+                    <img src="../images/eye.svg" alt="" class="show-password" draggable="false">
                 </div>
 
                 <span class="error-text">Error</span>
