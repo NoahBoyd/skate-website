@@ -323,6 +323,7 @@ body {
     justify-content: center;
     width: 20%;
     /* background-color: #df2323; */
+    transition: all 1s;
 }
 
 .bar {
@@ -332,6 +333,22 @@ body {
     background-color: white;
     border-radius: 3px;
     margin: 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 5px);
+    background-color: var(--main-accent-colour);
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -5px);
+    background-color: var(--main-accent-colour);
 }
 
 .searchbar-container {
