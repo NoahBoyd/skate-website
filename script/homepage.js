@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
 
     // menu button toggle open
     $(menuButton).on('click', () => {
-        console.log('open menu');
         if (!menuOpen) {
             $(menuButton).addClass('open');
             menuOpen = true;
