@@ -303,73 +303,111 @@ body {
 
 /*****************Homepage*************************/
 
-.homepage-container {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+/* Hamburger MENU */
+
+.slide {
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    background-color: #fff;
+    transition: 0.5s ease;
+    transform: translateX(-180px);
 }
 
-/* Search Header */
-.search-header {
-    display: flex;
-    height: 10vh;
-    /* background-color: aliceblue; */
+.slide-title {
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
 }
 
-.hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    /* background-color: #df2323; */
+.slide-list li {
+    list-style: none;
+
 }
 
-.bar {
-    width: 50%;
-    max-width: 50px;
-    height: 5px;
-    background-color: white;
-    border-radius: 3px;
-    margin: 3px;
+.slide-list li a {
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
 }
 
-.searchbar-container {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color:aquamarine; */
+.hamburger-button-checkbox {
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
 }
 
-#searchbar {
-    border: none;
-    border-radius: 15px;
-    height: 40%;
-    width: 90%;
-    box-shadow: var(--box-shadow-primary);
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    padding: 5px;
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #282828;
+    border-radius: 50px;
+    transition: 0.4s ease;
 }
 
-.profile-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: var(--box-shadow-primary);
+.toggle .top_bar {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+.toggle .middle_bar {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.toggle .bottom_bar {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+input:checked ~ .toggle .top_bar{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom_bar{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle_bar{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+input:checked ~ .slide {
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Hamburger MENU ends */
 
 /* Homepage Nav */
 
