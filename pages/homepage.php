@@ -1,6 +1,7 @@
 <?php include "head.php" ?>
 <script src="../script/homepage.js"></script>
-<body>
+<body id="homepageBody">
+    <div class="pageBody">
     <label>
         <input type="checkbox" class="hamburger-button-checkbox">
         <div class="toggle">
@@ -19,6 +20,16 @@
         </div>
     </label>
 
+    <div class="header-searchbar">
+        <input class="searchbar" type="text" placeholder="Search...">
+    </div>
+    
+    <div class="profile">
+        <div class="profile-button circle">
+
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>

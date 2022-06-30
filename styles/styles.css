@@ -303,23 +303,37 @@ body {
 
 /*****************Homepage*************************/
 
+#homepageBody {
+    display: flex;
+    justify-content: center;
+}
+.pageBody {
+    position: relative;
+    margin-top: 2vh; /* MIGHT NEED TO CHANGE THIS BACK TO BEING HEIGHT 100 WITH NO MARGIN (LIKE THIS FOR MOBILE WITH NOTCHES)*/
+    height: 98vh; 
+    width: 100%;
+    /* background-color: rgb(73, 73, 70); */
+}
 /* Hamburger MENU */
 
 .slide {
-    height: 100%;
+    height: 94%;
+    margin-top: 2vh;
     width: 180px;
     position: absolute;
-    background-color: #fff;
+    background-color: #222121;
     transition: 0.5s ease;
     transform: translateX(-180px);
 }
 
 .slide-title {
     font-weight: 800;
-    text-align: right;
-    padding: 10px 0;
-    padding-right: 30px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    /* padding-right: 30px; */
     pointer-events: none;
+    color: white;
 }
 
 .slide-list li {
@@ -334,6 +348,12 @@ body {
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.2s ease-out;
+    color: white;
+    margin-left: 20px;
+}
+
+.slide-list li a:hover {
+    color: var(--main-accent-colour);
 }
 
 .hamburger-button-checkbox {
@@ -348,11 +368,11 @@ body {
     width: 30px;
     top: 20px;
     left: 15px;
-    background-color: #fff;
+    background-color: transparent;
     z-index: 1;
     border-radius: 2px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    /* box-shadow: 0 0 10px rgba(0,0,0,.3); */
 
 }
 
@@ -369,18 +389,21 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: white;
 }
 
 .toggle .middle_bar {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: white;
 }
 
 .toggle .bottom_bar {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: white;
 }
 
 input:checked ~ .toggle .top_bar{
@@ -399,15 +422,58 @@ input:checked ~ .toggle .bottom_bar{
 
 input:checked ~ .toggle .middle_bar{
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(-20px);
 }
 
 input:checked ~ .slide {
     transform: translateX(0);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: var(--box-shadow-primary);
+    border-radius: 5px;
 }
 
 /* Hamburger MENU ends */
+
+.header-searchbar {
+display: flex;
+width: 100%;
+justify-content: center;
+margin-top: 20px;
+}
+
+.searchbar {
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-primary);
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.searchbar:focus {
+    box-shadow: var(--box-shadow-secondary);
+    outline: none;
+}
+
+.profile {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    z-index: 100;
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow-primary);
+}
 
 /* Homepage Nav */
 
@@ -431,6 +497,22 @@ input:checked ~ .slide {
     .wide-text-field {
         font-size: 150%;
     }
+
+    /* #homepageBody {
+        width: 50vw;
+        margin: 0;
+    } */
+    .pageBody {
+        width: 70%;
+        overflow: hidden;
+        margin-top: 0;
+        height: 100vh;
+    }
+
+    .slide {
+        margin-top: 0;
+    }
+    
 
     /* homepage */
     
@@ -479,9 +561,6 @@ input:checked ~ .slide {
         width: 40px;
     }
 
-    #searchbar {
-        height: 50%;
-    }
 }
 
 /* Large screen size */
