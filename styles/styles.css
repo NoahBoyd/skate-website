@@ -473,6 +473,9 @@ margin-top: 20px;
     height: 40px;
     border-radius: 50%;
     box-shadow: var(--box-shadow-primary);
+    background-size: cover;
+    background-image: url(../images/test3.jpg);
+    
 }
 
 /* Homepage Nav */

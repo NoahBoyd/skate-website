@@ -26,7 +26,6 @@
     
     <div class="profile">
         <div class="profile-button circle">
-
         </div>
     </div>
     </div>
