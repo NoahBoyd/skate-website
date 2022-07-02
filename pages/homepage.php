@@ -28,6 +28,9 @@
         <div class="profile-button circle">
         </div>
     </div>
+    <div class="profileMenu profileMenuHidden">
+        <div class="triangle-up"></div>
+    </div>
     </div>
 </body>
 

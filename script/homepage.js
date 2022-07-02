@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
 
     // fields
     let menuButton = $('.hamburger-menu');
+    let profileMenuButton = $('.profile-button');
 
 
     // functions
@@ -32,6 +33,12 @@ window.addEventListener('load', () => {
             $(navbar).css('left', '-50vw');
             $(homepageBody).css('left', 0);
         }
+    });
+
+    // Profile Menu Button Toggle Visible
+    $(profileMenuButton).on('click', () => {
+        let profileMenu = $('.profileMenu');
+        $(profileMenu).toggleClass('profileMenuHidden');
     });
 
 })
