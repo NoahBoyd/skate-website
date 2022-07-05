@@ -30,7 +30,15 @@
     </div>
     <div class="profileMenu profileMenuHidden">
         <div class="triangle-up"></div>
-    </div>
+        <div class="profileMenuPicture circle"></div>
+        <span class="profileMenuUsername">Username</span>
+        <div class="profileMenuOptions">
+            <ul class="profileMenuUl">
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Friends List</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 

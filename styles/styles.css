@@ -427,7 +427,7 @@ input:checked ~ .toggle .middle_bar{
 }
 
 input:checked ~ .slide {
-    transform: translateX(0);
+    transform: translateX(10px); /* Used to be 0 but 10px makes it look nicer*/
     box-shadow: var(--box-shadow-primary);
     border-radius: 5px;
 }
@@ -487,6 +487,9 @@ margin-top: 20px;
     border-radius: 10px;
     right: 5px;
     top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .triangle-up {
@@ -503,6 +506,44 @@ margin-top: 20px;
 
 .profileMenuHidden {
     display: none;
+}
+
+.profileMenuPicture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url(../images/test3.jpg);
+    margin-top: 30px;
+}
+
+.profileMenuUsername {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.profileMenuOptions {
+    margin-top: 40px;
+}
+
+.profileMenuUl {
+    list-style-type: none;
+    color: white;
+}
+
+.profileMenuUl li {
+    margin-bottom: 10px;
+}
+
+.profileMenuUl li a {
+    text-decoration: none;
+    color: white;
+}
+
+.profileMenuUl li a:hover {
+    color: var(--main-accent-colour);
 }
 
 /* Homepage Nav */
@@ -543,8 +584,14 @@ margin-top: 20px;
         margin-top: 20px;
     }
 
+
     .profileMenu {
-        width: 30vw;
+        width: 15vw;
+    }
+
+    .profileMenuPicture {
+        width: 100px;
+        height: 100px;
     }
     
 
