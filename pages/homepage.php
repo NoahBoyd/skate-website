@@ -15,7 +15,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Skate</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a href="#">Friends</a></li>
             </ul>
         </div>
     </label>
@@ -35,7 +35,7 @@
         <div class="profileMenuOptions">
             <ul class="profileMenuUl">
                 <li><a href="#">My Profile</a></li>
-                <li><a href="#">Friends List</a></li>
+                <li><a href="#">Settings</a></li>
                 <li><a href="#">Logout</a></li>
             </ul>
         </div>
