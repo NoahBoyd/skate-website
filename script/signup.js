@@ -62,7 +62,43 @@ window.addEventListener('load', function() {
     }
 
     function ajaxSuccess(result) {
-        console.log(result);
+        resultCode = result.replace(/[\[\]']+/g,''); // strip square brackets from result
+        switch(parseInt(resultCode)) {
+            case 1: // success
+                console.log('success');
+                showError('Account Created. Redirecting...');
+
+                // break is causing setTimeout not to work... This is the solution to this for now.
+                function waitForMessage(flag) {
+                    if (!flag) {
+                        setTimeout(() => {
+                            window.location.replace("../index.php");
+                            waitForMessage(true);
+                        }, 1000);
+                    }
+                }
+                waitForMessage(false);
+                break;
+            case -1: // entry was invalid
+                console.log('invalid entry');
+                showError('An Entry is Invalid');
+                break;
+            case -2: // username is taken
+                console.log('Username Taken');
+                showError('That username is taken');
+                break;
+            case -3: // email is taken
+                console.log('Email Taken');
+                showError('That email is taken');
+                break;
+            case -4: // failed to add user to the database
+                console.log('Failed to add user to database');
+                showError('Failed to create account');
+                break;
+            default: // other unknown errors
+                console.log('Unexpected Error Occured');
+                showError('An unexpected error occured');
+        }
     }
 
     // function for show-password button to toggle password/text
