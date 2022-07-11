@@ -62,8 +62,8 @@ window.addEventListener('load', function() {
     }
 
     function ajaxSuccess(result) {
-        resultCode = result.replace(/[\[\]']+/g,''); // strip square brackets from result
-        switch(parseInt(resultCode)) {
+        result = JSON.parse(result);
+        switch(result[0]) {
             case 1: // success
                 console.log('success');
                 showError('Account Created. Redirecting...');
