@@ -64,7 +64,35 @@ window.addEventListener("load", function() {
     }
 
     function ajaxSuccess(result) {
+        result = JSON.parse(result);
         console.log(result);
+        switch(result[0]) {
+            case 1:
+                console.log('login successful');
+                // redirect to homepage
+                // break is causing setTimeout not to work... This is the solution to this for now.
+                function waitForMessage(flag) {
+                    if (!flag) {
+                        setTimeout(() => {
+                            window.location.replace("pages/homepage.php");
+                            waitForMessage(true);
+                        }, 1000);
+                    }
+                }
+                waitForMessage(false);
+                break;
+            case -2:
+                console.log('database error');
+                break;
+            case -3:
+                console.log('username not found');
+                break;
+            case -4:
+                console.log('Incorrect Password');
+                break;
+            default:
+                console.log('unknown error occured');
+        }
     }
 
     // this function will show an error to the screen
