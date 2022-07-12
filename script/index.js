@@ -69,6 +69,7 @@ window.addEventListener("load", function() {
         switch(result[0]) {
             case 1:
                 console.log('login successful');
+                showError('Logged in successfully');
                 // redirect to homepage
                 // break is causing setTimeout not to work... This is the solution to this for now.
                 function waitForMessage(flag) {
@@ -76,22 +77,26 @@ window.addEventListener("load", function() {
                         setTimeout(() => {
                             window.location.replace("pages/homepage.php");
                             waitForMessage(true);
-                        }, 1000);
+                        }, 700);
                     }
                 }
                 waitForMessage(false);
                 break;
             case -2:
                 console.log('database error');
+                showError('Database Error please try again later');
                 break;
             case -3:
                 console.log('username not found');
+                showError("Username not found");
                 break;
             case -4:
                 console.log('Incorrect Password');
+                showError('Incorrect Password');
                 break;
             default:
                 console.log('unknown error occured');
+                showError('Unexpected error occured')
         }
     }
 

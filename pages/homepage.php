@@ -1,6 +1,24 @@
+<?php session_start();
+?>
 <?php include "head.php" ?>
 <script src="../script/homepage.js"></script>
 <body id="homepageBody">
+    <!-- USER NOT LOGGED IN START -->
+<?php
+    if (!isset($_SESSION["username"])) { // if session doesnt exist (not logged in) display something
+    ?>
+    <div class="logged-out">
+    <h1>Please Sign in to view list</h1>
+    <a href="../index.php"><button>Login</button></a>
+    </div>
+    <!-- USER NOT LOGGED IN END -->
+
+    <!-- USER LOGGED IN START -->
+<?php
+    } else { // if session does exist. Display something else. 
+        
+    ?>
+
     <div class="pageBody">
     <label>
         <input type="checkbox" class="hamburger-button-checkbox">
@@ -36,10 +54,14 @@
             <ul class="profileMenuUl">
                 <li><a href="#">My Profile</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="../server/logout.php">Logout</a></li>
             </ul>
         </div>
     </div>
+    <?php
+    }
+    ?>
+    <!-- USER LOGGED IN END -->
 </body>
 
 </html>
