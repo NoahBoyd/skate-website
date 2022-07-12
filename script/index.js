@@ -77,7 +77,7 @@ window.addEventListener("load", function() {
                         setTimeout(() => {
                             window.location.replace("pages/homepage.php");
                             waitForMessage(true);
-                        }, 700);
+                        }, 400);
                     }
                 }
                 waitForMessage(false);

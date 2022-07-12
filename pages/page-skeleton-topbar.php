@@ -49,7 +49,7 @@
     <div class="profileMenu profileMenuHidden">
         <div class="triangle-up"></div>
         <div class="profileMenuPicture circle"></div>
-        <span class="profileMenuUsername"><?php echo ucfirst($_SESSION["username"]); ?></span>
+        <span class="profileMenuUsername">Username</span>
         <div class="profileMenuOptions">
             <ul class="profileMenuUl">
                 <li><a href="#">My Profile</a></li>
