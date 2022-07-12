@@ -40,6 +40,9 @@ if ($success) {
                 $passwordsMatch = true;
                 $result = [1, $userID, $userName];
                 // start session
+                session_start();
+                $_SESSION['username'] = $userName;
+                $_SESSION['userid'] = $userID;
             } else {
                 $result = [-4]; // passwords do not match
             }

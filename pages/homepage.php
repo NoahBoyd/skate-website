@@ -54,7 +54,7 @@
             <ul class="profileMenuUl">
                 <li><a href="#">My Profile</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="../server/logout.php">Logout</a></li>
             </ul>
         </div>
     </div>
