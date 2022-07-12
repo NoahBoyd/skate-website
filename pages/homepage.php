@@ -58,6 +58,14 @@
             </ul>
         </div>
     </div>
+    <div class="homepage-largeButtons">
+        <div class="largeBtnContainer">
+            <div class="largeBtn">Trick Book</div>
+            <div class="largeBtn">My List</div>
+            <div class="largeBtn">SKATE</div>
+            <div class="largeBtn">Other</div>
+        </div>
+    </div>
     <?php
     }
     ?>
