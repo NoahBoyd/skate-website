@@ -623,9 +623,15 @@ margin-top: 20px;
         height: 100px;
     }
     
+    .largeBtnContainer {
+        width: 70%;
+    }
 
     /* homepage */
-    
+    .largeBtn {
+        width: calc(100% * (1/3) - 10px - 1px);
+        margin-left: 1rem;
+    }
 }
 
 /* Tiny Screen Size */
